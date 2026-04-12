@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="AI Stock Market Dashboard",
+    page_title="AI Stock Forecaster",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -761,8 +761,7 @@ def main():
         """
         <div style='text-align: center; color: #666; padding: 20px;'>
             <p>🚀 <strong>AI Stock Dashboard</strong> - Professional technical analysis with machine learning</p>
-            <p><em>⚠️ This is for educational purposes only. Not financial advice.</em></p>
-            <p>Built with ❤️ by <a href='https://erikthiart.com' target='_blank'>Erik Thiart</a></p>
+            <p>Built with ❤️ by </br> UDAY LANJEWAR </br> MANTHAN UKEY </br> RANIT GARUDE </br> MOHAN KHOBARKHEDE </br> ROHIT BAWANUKEY </p>
             <p>📊 Powered by <a href='https://plotly.com' target='_blank'>Plotly</a> and <a href='https://streamlit.io' target='_blank'>Streamlit</a></p>
         </div>
         """, 
