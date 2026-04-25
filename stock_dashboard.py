@@ -476,19 +476,245 @@ def main():
     
     # Stock selection with popular choices
     popular_stocks = {
-        'Apple': 'AAPL', 'Microsoft': 'MSFT', 'Google': 'GOOGL', 
-        'Amazon': 'AMZN', 'Tesla': 'TSLA', 'NVIDIA': 'NVDA',
-        'Meta': 'META', 'Netflix': 'NFLX', 'AMD': 'AMD', 'Intel': 'INTC'
+       
+
+        # ══════════════════════════════════════════
+        # 🇺🇸  TOP 50 US COMPANIES
+        # ══════════════════════════════════════════
+
+        # ── Big Tech ──────────────────────────────
+        "🇺🇸 Apple":              "AAPL",
+        "🇺🇸 Microsoft":          "MSFT",
+        "🇺🇸 Google (Alphabet)":  "GOOGL",
+        "🇺🇸 Amazon":             "AMZN",
+        "🇺🇸 Meta (Facebook)":    "META",
+        "🇺🇸 Netflix":            "NFLX",
+        "🇺🇸 Tesla":              "TSLA",
+        "🇺🇸 NVIDIA":             "NVDA",
+        "🇺🇸 AMD":                "AMD",
+        "🇺🇸 Intel":              "INTC",
+        "🇺🇸 Qualcomm":           "QCOM",
+        "🇺🇸 Salesforce":         "CRM",
+        "🇺🇸 Adobe":              "ADBE",
+        "🇺🇸 Oracle":             "ORCL",
+        "🇺🇸 IBM":                "IBM",
+        "🇺🇸 Cisco":              "CSCO",
+
+        # ── Finance ───────────────────────────────
+        "🇺🇸 JPMorgan Chase":     "JPM",
+        "🇺🇸 Bank of America":    "BAC",
+        "🇺🇸 Goldman Sachs":      "GS",
+        "🇺🇸 Morgan Stanley":     "MS",
+        "🇺🇸 Wells Fargo":        "WFC",
+        "🇺🇸 Visa":               "V",
+        "🇺🇸 Mastercard":         "MA",
+        "🇺🇸 American Express":   "AXP",
+        "🇺🇸 BlackRock":          "BLK",
+
+        # ── Healthcare / Pharma ───────────────────
+        "🇺🇸 Johnson & Johnson":  "JNJ",
+        "🇺🇸 Pfizer":             "PFE",
+        "🇺🇸 UnitedHealth":       "UNH",
+        "🇺🇸 Abbott Labs":        "ABT",
+        "🇺🇸 Eli Lilly":          "LLY",
+        "🇺🇸 Merck":              "MRK",
+
+        # ── Consumer / Retail ─────────────────────
+        "🇺🇸 Walmart":            "WMT",
+        "🇺🇸 Coca-Cola":          "KO",
+        "🇺🇸 PepsiCo":            "PEP",
+        "🇺🇸 McDonald's":         "MCD",
+        "🇺🇸 Nike":               "NKE",
+        "🇺🇸 Starbucks":          "SBUX",
+        "🇺🇸 Procter & Gamble":   "PG",
+        "🇺🇸 Costco":             "COST",
+        "🇺🇸 Home Depot":         "HD",
+
+        # ── Energy ────────────────────────────────
+        "🇺🇸 ExxonMobil":         "XOM",
+        "🇺🇸 Chevron":            "CVX",
+
+        # ── Industrial / Other ────────────────────
+        "🇺🇸 Boeing":             "BA",
+        "🇺🇸 Caterpillar":        "CAT",
+        "🇺🇸 3M":                 "MMM",
+        "🇺🇸 General Electric":   "GE",
+        "🇺🇸 Berkshire Hathaway": "BRK-B",
+        "🇺🇸 Spotify":            "SPOT",
+        "🇺🇸 Uber":               "UBER",
+        "🇺🇸 Airbnb":             "ABNB",
+
+        # ── US Indices ────────────────────────────
+        "🇺🇸 S&P 500":            "^GSPC",
+        "🇺🇸 NASDAQ":             "^IXIC",
+        "🇺🇸 Dow Jones":          "^DJI",
+
+
+        # ══════════════════════════════════════════
+        # 🇮🇳  TOP 100 INDIAN COMPANIES
+        # ══════════════════════════════════════════
+
+        # ── IT / Technology (NSE) ─────────────────
+        "🇮🇳 TCS (NSE)":                  "TCS.NS",
+        "🇮🇳 Infosys (NSE)":              "INFY.NS",
+        "🇮🇳 Wipro (NSE)":                "WIPRO.NS",
+        "🇮🇳 HCL Technologies (NSE)":     "HCLTECH.NS",
+        "🇮🇳 Tech Mahindra (NSE)":        "TECHM.NS",
+        "🇮🇳 LTIMindtree (NSE)":          "LTIM.NS",
+        "🇮🇳 Mphasis (NSE)":              "MPHASIS.NS",
+        "🇮🇳 Persistent Systems (NSE)":   "PERSISTENT.NS",
+        "🇮🇳 Coforge (NSE)":              "COFORGE.NS",
+        "🇮🇳 Tata Elxsi (NSE)":           "TATAELXSI.NS",
+
+        # ── IT / Technology (BSE) ─────────────────
+        "🇮🇳 TCS (BSE)":                  "TCS.BO",
+        "🇮🇳 Infosys (BSE)":              "INFY.BO",
+        "🇮🇳 Wipro (BSE)":                "WIPRO.BO",
+        "🇮🇳 HCL Technologies (BSE)":     "HCLTECH.BO",
+        "🇮🇳 Tech Mahindra (BSE)":        "TECHM.BO",
+
+        # ── Banking & Finance (NSE) ───────────────
+        "🇮🇳 HDFC Bank (NSE)":            "HDFCBANK.NS",
+        "🇮🇳 ICICI Bank (NSE)":           "ICICIBANK.NS",
+        "🇮🇳 SBI (NSE)":                  "SBIN.NS",
+        "🇮🇳 Axis Bank (NSE)":            "AXISBANK.NS",
+        "🇮🇳 Kotak Mahindra Bank (NSE)":  "KOTAKBANK.NS",
+        "🇮🇳 IndusInd Bank (NSE)":        "INDUSINDBK.NS",
+        "🇮🇳 Bank of Baroda (NSE)":       "BANKBARODA.NS",
+        "🇮🇳 Punjab National Bank (NSE)": "PNB.NS",
+        "🇮🇳 Canara Bank (NSE)":          "CANBK.NS",
+        "🇮🇳 Federal Bank (NSE)":         "FEDERALBNK.NS",
+
+        # ── Banking & Finance (BSE) ───────────────
+        "🇮🇳 HDFC Bank (BSE)":            "HDFCBANK.BO",
+        "🇮🇳 ICICI Bank (BSE)":           "ICICIBANK.BO",
+        "🇮🇳 SBI (BSE)":                  "SBIN.BO",
+        "🇮🇳 Axis Bank (BSE)":            "AXISBANK.BO",
+        "🇮🇳 Kotak Mahindra Bank (BSE)":  "KOTAKBANK.BO",
+
+        # ── NBFC / Financial Services (NSE) ───────
+        "🇮🇳 Bajaj Finance (NSE)":        "BAJFINANCE.NS",
+        "🇮🇳 Bajaj Finserv (NSE)":        "BAJAJFINSV.NS",
+        "🇮🇳 Muthoot Finance (NSE)":      "MUTHOOTFIN.NS",
+        "🇮🇳 Shriram Finance (NSE)":      "SHRIRAMFIN.NS",
+        "🇮🇳 Cholamandalam (NSE)":        "CHOLAFIN.NS",
+        "🇮🇳 HDFC Life (NSE)":            "HDFCLIFE.NS",
+        "🇮🇳 SBI Life (NSE)":             "SBILIFE.NS",
+        "🇮🇳 ICICI Prudential (NSE)":     "ICICIPRULI.NS",
+
+        # ── Energy & Oil (NSE) ────────────────────
+        "🇮🇳 Reliance Industries (NSE)":  "RELIANCE.NS",
+        "🇮🇳 ONGC (NSE)":                 "ONGC.NS",
+        "🇮🇳 BPCL (NSE)":                 "BPCL.NS",
+        "🇮🇳 Indian Oil (NSE)":           "IOC.NS",
+        "🇮🇳 HPCL (NSE)":                 "HINDPETRO.NS",
+        "🇮🇳 Coal India (NSE)":           "COALINDIA.NS",
+        "🇮🇳 Power Grid (NSE)":           "POWERGRID.NS",
+        "🇮🇳 NTPC (NSE)":                 "NTPC.NS",
+        "🇮🇳 Adani Green (NSE)":          "ADANIGREEN.NS",
+        "🇮🇳 Adani Power (NSE)":          "ADANIPOWER.NS",
+
+        # ── Energy & Oil (BSE) ────────────────────
+        "🇮🇳 Reliance Industries (BSE)":  "RELIANCE.BO",
+        "🇮🇳 ONGC (BSE)":                 "ONGC.BO",
+
+        # ── Adani Group (NSE) ─────────────────────
+        "🇮🇳 Adani Enterprises (NSE)":    "ADANIENT.NS",
+        "🇮🇳 Adani Ports (NSE)":          "ADANIPORTS.NS",
+        "🇮🇳 Adani Total Gas (NSE)":      "ATGL.NS",
+        "🇮🇳 Adani Wilmar (NSE)":         "AWL.NS",
+
+        # ── Tata Group (NSE) ──────────────────────
+        "🇮🇳 Tata Motors (NSE)":          "TATAMOTORS.NS",
+        "🇮🇳 Tata Steel (NSE)":           "TATASTEEL.NS",
+        "🇮🇳 Tata Power (NSE)":           "TATAPOWER.NS",
+        "🇮🇳 Tata Consumer (NSE)":        "TATACONSUM.NS",
+        "🇮🇳 Tata Communications (NSE)":  "TATACOMM.NS",
+        "🇮🇳 Titan Company (NSE)":        "TITAN.NS",
+
+        # ── Automobile (NSE) ──────────────────────
+        "🇮🇳 Maruti Suzuki (NSE)":        "MARUTI.NS",
+        "🇮🇳 Mahindra & Mahindra (NSE)":  "M&M.NS",
+        "🇮🇳 Hero MotoCorp (NSE)":        "HEROMOTOCO.NS",
+        "🇮🇳 Bajaj Auto (NSE)":           "BAJAJ-AUTO.NS",
+        "🇮🇳 Eicher Motors (NSE)":        "EICHERMOT.NS",
+        "🇮🇳 TVS Motor (NSE)":            "TVSMOTOR.NS",
+        "🇮🇳 Ashok Leyland (NSE)":        "ASHOKLEY.NS",
+
+        # ── FMCG / Consumer (NSE) ─────────────────
+        "🇮🇳 Hindustan Unilever (NSE)":   "HINDUNILVR.NS",
+        "🇮🇳 ITC (NSE)":                  "ITC.NS",
+        "🇮🇳 Nestle India (NSE)":         "NESTLEIND.NS",
+        "🇮🇳 Britannia (NSE)":            "BRITANNIA.NS",
+        "🇮🇳 Dabur India (NSE)":          "DABUR.NS",
+        "🇮🇳 Marico (NSE)":               "MARICO.NS",
+        "🇮🇳 Colgate-Palmolive (NSE)":    "COLPAL.NS",
+        "🇮🇳 Godrej Consumer (NSE)":      "GODREJCP.NS",
+        "🇮🇳 Emami (NSE)":                "EMAMILTD.NS",
+
+        # ── Pharma / Healthcare (NSE) ─────────────
+        "🇮🇳 Sun Pharma (NSE)":           "SUNPHARMA.NS",
+        "🇮🇳 Dr Reddy's (NSE)":           "DRREDDY.NS",
+        "🇮🇳 Cipla (NSE)":                "CIPLA.NS",
+        "🇮🇳 Divis Laboratories (NSE)":   "DIVISLAB.NS",
+        "🇮🇳 Aurobindo Pharma (NSE)":     "AUROPHARMA.NS",
+        "🇮🇳 Lupin (NSE)":                "LUPIN.NS",
+        "🇮🇳 Torrent Pharma (NSE)":       "TORNTPHARM.NS",
+        "🇮🇳 Apollo Hospitals (NSE)":     "APOLLOHOSP.NS",
+        "🇮🇳 Max Healthcare (NSE)":       "MAXHEALTH.NS",
+
+        # ── Telecom (NSE) ─────────────────────────
+        "🇮🇳 Bharti Airtel (NSE)":        "BHARTIARTL.NS",
+        "🇮🇳 Vodafone Idea (NSE)":        "IDEA.NS",
+        "🇮🇳 Indus Towers (NSE)":         "INDUSTOWER.NS",
+
+        # ── Cement & Infrastructure (NSE) ─────────
+        "🇮🇳 UltraTech Cement (NSE)":     "ULTRACEMCO.NS",
+        "🇮🇳 Shree Cement (NSE)":         "SHREECEM.NS",
+        "🇮🇳 Ambuja Cement (NSE)":        "AMBUJACEM.NS",
+        "🇮🇳 ACC (NSE)":                  "ACC.NS",
+        "🇮🇳 Larsen & Toubro (NSE)":      "LT.NS",
+        "🇮🇳 DLF (NSE)":                  "DLF.NS",
+
+        # ── Metals & Mining (NSE) ─────────────────
+        "🇮🇳 JSW Steel (NSE)":            "JSWSTEEL.NS",
+        "🇮🇳 Hindalco (NSE)":             "HINDALCO.NS",
+        "🇮🇳 Vedanta (NSE)":              "VEDL.NS",
+        "🇮🇳 SAIL (NSE)":                 "SAIL.NS",
+
+        # ── New-Age / Internet (NSE) ──────────────
+        "🇮🇳 Zomato (NSE)":               "ZOMATO.NS",
+        "🇮🇳 Paytm (NSE)":                "PAYTM.NS",
+        "🇮🇳 Nykaa (NSE)":                "NYKAA.NS",
+        "🇮🇳 Policy Bazaar (NSE)":        "POLICYBZR.NS",
+        "🇮🇳 Delhivery (NSE)":            "DELHIVERY.NS",
+        "🇮🇳 Swiggy (NSE)":               "SWIGGY.NS",
+
+        # ── Defence / PSU (NSE) ───────────────────
+        "🇮🇳 HAL (NSE)":                  "HAL.NS",
+        "🇮🇳 BEL (NSE)":                  "BEL.NS",
+        "🇮🇳 BHEL (NSE)":                 "BHEL.NS",
+        "🇮🇳 GAIL (NSE)":                 "GAIL.NS",
+        "🇮🇳 SAIL (BSE)":                 "SAIL.BO",
+
+        # ── Indian Indices ────────────────────────
+        "🇮🇳 Nifty 50":                   "^NSEI",
+        "🇮🇳 Sensex (BSE 30)":            "^BSESN",
+        "🇮🇳 Nifty Bank":                 "^NSEBANK",
+        "🇮🇳 Nifty IT":                   "^CNXIT",
+        "🇮🇳 Nifty Pharma":               "NIFTY_PHARMA.NS",
+
     }
     
+    
     stock_choice = st.sidebar.selectbox(
-        "🏢 Select Stock:",
+        "🏢 Select Stock(US & INDIAN stocksd):",
         options=list(popular_stocks.keys()) + ['Custom'],
         index=0
     )
     
     if stock_choice == 'Custom':
-        symbol = st.sidebar.text_input("Enter Stock Symbol:", value="AAPL", max_chars=10).upper()
+        symbol = st.sidebar.text_input("Enter Stock Symbol:", value="AAPL", max_chars=20).upper()
     else:
         symbol = popular_stocks[stock_choice]
     
@@ -544,8 +770,8 @@ def main():
     with col1:
         st.metric(
             label="💰 Current Price",
-            value=f"${latest_price:.2f}",
-            delta=f"{price_change:.2f} ({price_change_pct:+.2f}%)"
+           value=f"{'₹' if symbol.endswith(('.NS','.BO')) else '$'}{latest_price:.2f}",
+           delta=f"{'₹' if symbol.endswith(('.NS','.BO')) else '$'}{price_change:.2f} ({price_change_pct:+.2f}%)" 
         )
     
     with col2:
@@ -630,7 +856,7 @@ def main():
                 with pred_col1:
                     st.metric(
                         label="🎯 Next Day Prediction",
-                        value=f"${prediction:.2f}",
+                        value=f"{'₹' if symbol.endswith(('.NS','.BO')) else '$'}{prediction:.2f}",
                         delta=f"{predicted_change:+.2f}%"
                     )
                 
